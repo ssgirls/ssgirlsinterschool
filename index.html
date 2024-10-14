@@ -1,0 +1,331 @@
+<?php include_once('connect.php');
+ if(isset($_POST['submit'])){
+$username=$_POST['username'];
+$password=$_POST['password'];
+
+
+$query=mysqli_query($con,"insert into registration(username,password) values('$username','$password')");
+if($query){
+echo "Date Saved Successfully";
+} else {
+echo "error in saving";
+}
+
+ }
+?>
+ 
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: School Education
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>School Education</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.slidepanel.setup.js"></script>
+<!-- Homepage Only Scripts -->
+<script type="text/javascript" src="layout/scripts/jquery.cycle.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    $('#featured_slide').after('<div id="fsn"><ul id="fs_pagination">').cycle({
+        timeout: 1000,
+        fx: 'fade',
+        pager: '#fs_pagination',
+        pause: 1,
+        pauseOnPagerHover: 0
+    });
+});
+</script>
+<!-- End Homepage Only Scripts -->
+</head>
+<body>
+<div class="wrapper col0">
+  <div id="topbar">
+    <div id="slidepanel">
+      <div class="topbox">
+        <h2>S.S.GIRLS INTER SCHOOL, JEHANABAD</h2>
+        <p>For any types of teacher or gurdian enquiry please login here</p>
+        <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+      </div>
+      <div class="topbox">
+        <h2>Teachers Login Here</h2>
+        <form action="connect.php" method="post">
+          <fieldset>
+            <legend>Teachers Login Form</legend>
+            <label for="teachername">Username:
+              <input type="text" class ="form-control" name="teachername" id="teachername" value="" />
+            </label>
+            <label for="teacherpass">Password:
+              <input type="password" class = "form-control" name="password" id="password" value="" />
+            </label>
+            <label for="teacherremember">
+              <input class="checkbox" type="checkbox" name="teacherremember" id="teacherremember" checked="checked" />
+              Remember me</label>
+            <p>
+              <input type="submit" name="teacherlogin" id="teacherlogin" value="Login" />
+              &nbsp;
+              <input type="reset" name="teacherreset" id="teacherreset" value="Reset" />
+            </p>
+          </fieldset>
+        </form>
+      </div>
+      <div class="topbox last">
+        <h2>Student Login Here</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Student Login Form</legend>
+            <label for="pupilname">Username:
+              <input type="text" name="pupilname" id="pupilname" value="" />
+            </label>
+            <label for="pupilpass">Password:
+              <input type="password" name="pupilpass" id="pupilpass" value="" />
+            </label>
+            <label for="pupilremember">
+              <input class="checkbox" type="checkbox" name="pupilremember" id="pupilremember" checked="checked" />
+              Remember me</label>
+            <p>
+              <input type="submit" name="pupillogin" id="pupillogin" value="Login" />
+              &nbsp;
+              <input type="reset" name="pupilreset" id="pupilreset" value="Reset" />
+            </p>
+          </fieldset>
+        </form>
+      </div>
+      <br class="clear" />
+    </div>
+    <div id="loginpanel">
+      <ul>
+        <li class="left">Log In Here &raquo;</li>
+        <li class="right" id="toggle"><a id="slideit" href="#slidepanel">Administration</a><a id="closeit" style="display: none;" href="#slidepanel">Close Panel</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+         <img src="images/demo/new1.png" width="200" height="200" alt="" />
+         <div class="floater">
+              <h1>Rajya Samposit Balika Inter School</h1>
+                   <p> Govt. of Bihar Affiliated(UDISC 10331112707)</p>
+                
+      </div>
+    </div>
+    <div id="topnav">
+      <ul>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="pages/course.html#">Courses</a></li>
+        <li><a href="pages/studentreg.html">Admission</a></li>
+        <li><a href="pages/facult.html#">Faculties</a></li>
+        <li class="last"><a href="pages/gallery1.html#">Gallery</a></li>
+        <li class="last"><a href="pages/Quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+  <div id="featured_slide">
+    <div class="featured_box"><a href="#"><img src="images/demo/campus1.jpeg" alt="" /></a>
+      <div class="floater">
+        <h2>1. S.S.GIRLS INTER SCHOOL, JEHANABAD</h2>
+        <p>S.S.Girls Inter school is established and administered by the Educational Department, Govt. of Bihar.The school was started in 1953 and recognised by Bihar School Examinationa Board, Patna.It is situated at Ghosi Road, East of Gandhi Maidan, Jehanabad</p>
+        <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+      </div>
+    </div>
+    <div class="featured_box"><a href="#"><img src="images/demo/pray.jpeg" alt="" /></a>
+      <div class="floater">
+        <h2>2. Pray Time</h2>
+        <p>Pray Time is 9.00 A.M. to 9.30 A.M. During this time student sing Bihar Rajya Geet, Samidhan Ke Prasthavana, National Anthem, News Paper headline in both Hindi and English. Conduction Yoga etc</p>
+        <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+      </div>
+    </div>
+    <div class="featured_box"><a href="#"><img src="images/demo/library.jpeg" alt="" /></a>
+      <div class="floater">
+        <h2>3. Library</h2>
+        <p> School has a separte library room.Library room having apporx 3500 books of different subject and literature.</p>
+        <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+      </div>
+    </div>
+    <div class="featured_box"><a href="#"><img src="images/demo/laboratory.jpeg" alt="" /></a>
+      <div class="floater">
+        <h2>4. laboratory</h2>
+        <p>School has separate laboratory for Physics, Chemistry, Biology, Home Science.</p>
+        <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+      </div>
+    </div>
+    <div class="featured_box"><a href="#"><img src="images/demo/smart.jpeg" alt="" /></a>
+      <div class="floater">
+        <h2>5. Smart Class Room</h2>
+        <p>School having ICT Lab and Smart Class Room. 9 to 12 standard student provided video lecture for every subject on each topics.</p>
+        <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+      </div>
+    </div>
+    <div class="featured_box"><a href="#"><img src="images/demo/computerlab.jpeg" alt="" /></a>
+      <div class="floater">
+        <h2>6. ICT Computer Lab</h2>
+        <p>School having ICT Computer Lab which is equipped with Ubuntu operating system (Linux).</p>
+        <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+  <div id="homecontent">
+    <div class="fl_left">
+      <div class="column2">
+        <ul>
+          <li>
+            <h2>Head Master Message</h2>
+            <div class="imgholder"><img src="images/demo/principal1.jpeg" width="250" height="200" alt="" /></div>
+            <p> A child education is a unique and challenging process which not only instils in them to desire to learn more but unlocks their hidden talents and potentials. The role for any institution is to felicitate the development of a child. 
+            <p>we wil try to strike the correct balance between curriculum, modernism and ethical values.
+            <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+          </li>
+          <li class="last">
+            <h2>Latest News</h2>
+        
+               
+            <P><a href="schoolrecord/BSEB_Inter24TheoryAdmitCard_NewScience Regular.pdf">Download Inter 2024 Annul Examination Admit Card Science (Theory)</P></a>
+            <P><a href="schoolrecord/BSEB_Inter24TheoryAdmitCard_NewArts Regular.pdf">Download Inter 2024 Annul Examination Admit Card Arts (Theory)</P></a>
+            <P><a href="schoolrecord/AnnualExam2024-AdmitCard.pdf">Download Matriculation 2024 Examination Admit Card(Theory)</P></a>
+                    <P><P><a href="schoolrecord/MEDHASOFT ALL STUDENT 75 AttendanceList YES.pdf">Medhsoft Record (Yes) All Class</P>
+            <P><a href="schoolrecord/POST MATRIC SCHOLARSHIP VERIFIED 2022-23-24.pdf">Post Matric Verified List 2022-23 & 2023-24</P></a></marquee>
+            
+             
+          </li>
+        </ul>
+        <br class="clear" />
+      </div>
+      <div class="column2">
+        <h2>Class Activities</h2>
+        <img class="imgl" src="images/demo/class1.jpeg" alt="" />
+        <p><li> <p><center> Class Routine :-  <a href="schoolrecord/SCHOOL ROUTINE.pdf">9th and 10th Daily Routine</center></li>
+        <p><li><p><center> Computer Routine :-  <a href="schoolrecord/computer routine.jpeg">Computer Routine</center></li>
+        </a>.
+        <p><li> 9th     10th    11th Arts   11 Science  12 Arts  12 Science</li>
+        <p><li> <p> Monthly Exam Result :-  <a href="http://www.os-templates.com/">Latest Month Test Result</a>.
+        <p><li> <p> Scholarship Details :-  <a href="http://www.os-templates.com/">OS Templates</a>.</p></li></ul>
+       
+      </div>
+    </div>
+    <div class="fl_right">
+      <h2>Latest School Achivements</h2>
+      <ul>
+        <li>
+          <div class="imgholder"><a href="#"><img src="images/demo/inspire2.jpeg" alt="" /></a></div>
+          <p><strong><a href="#">Inspire Award</a></strong></p>
+          <p>School regularly participate in Inspire Award and Awarded in 2021 and 2023 
+          
+          School regularly participate in Inspire Award and Awarded in 2021 and 2023
+          </p>
+        </li>
+        <li>
+          <div class="imgholder"><a href="#"><img src="images/demo/pic15.jpeg" alt="" /></a></div>
+          <p><strong><a href="#">Bihar Yova Festival</a></strong></p>
+          <p>School participated in Bihar Yuva Festival and awarded 1st Position in state level
+          School participated in Bihar Yuva Festival and awarded 1st Position in state level</p>
+        </li>
+        <li>
+          <div class="imgholder"><a href="#"><img src="images/demo/pic12.jpeg" alt="" /></a></div>
+          <p><strong><a href="#">Banawar Festival</a></strong></p>
+          <p>School participated in every year Banawar Festival
+          School participated in every year Banawar Festival
+          School participated in every year Banawar Festival
+          </p>
+        </li>
+        <li>
+          <div class="imgholder"><a href="#"><img src="images/demo/pic12.jpeg" alt="" /></a></div>
+          <p><strong><a href="#">Sufi Mahotsav</a></strong></p>
+          <p>School participated in every year Banawar Festival
+          School participated in every year Banawar Festival
+          School participated in every year Banawar Festival
+          </p>
+        </li>
+        
+        </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col4">
+  <div id="footer">
+    <div class="footbox">
+      <h2>S.S.Girls inter school</h2>
+      <ul>
+        <li> Ghosi Road</li>
+        <li>East Ghandi Maidan</li>
+        <li>Jehanabad, Bihar></li>
+        <li>email:-ssgirlsinterschooljehanabad@gmail.com</li>
+        <li>Phone:- </a></li>
+              </ul>
+    </div>
+    <div class="footbox">
+      <h2>Lacus interdum</h2>
+      <ul>
+        <li><a href="#">Lorem ipsum dolor</a></li>
+        <li><a href="#">Suspendisse in neque</a></li>
+        <li><a href="#">Praesent et eros</a></li>
+        <li><a href="#">Lorem ipsum dolor</a></li>
+        <li><a href="#">Suspendisse in neque</a></li>
+        <li class="last"><a href="#">Praesent et eros</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Lacus interdum</h2>
+      <ul>
+        <li><a href="#">Lorem ipsum dolor</a></li>
+        <li><a href="#">Suspendisse in neque</a></li>
+        <li><a href="#">Praesent et eros</a></li>
+        <li><a href="#">Lorem ipsum dolor</a></li>
+        <li><a href="#">Suspendisse in neque</a></li>
+        <li class="last"><a href="#">Praesent et eros</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Lacus interdum</h2>
+      <ul>
+        <li><a href="#">Lorem ipsum dolor</a></li>
+        <li><a href="#">Suspendisse in neque</a></li>
+        <li><a href="#">Praesent et eros</a></li>
+        <li><a href="#">Lorem ipsum dolor</a></li>
+        <li><a href="#">Suspendisse in neque</a></li>
+        <li class="last"><a href="#">Praesent et eros</a></li>
+      </ul>
+    </div>
+    <div class="footbox last">
+      <h2>Lacus interdum</h2>
+      <ul>
+        <li><a href="#">Lorem ipsum dolor</a></li>
+        <li><a href="#">Suspendisse in neque</a></li>
+        <li><a href="#">Praesent et eros</a></li>
+        <li><a href="#">Lorem ipsum dolor</a></li>
+        <li><a href="#">Suspendisse in neque</a></li>
+        <li class="last"><a href="#">Praesent et eros</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col5">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2024 - All Rights Reserved - <a href="#">Anzar Imam Ansari</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  display:flex;
+  text-align:center;
+}
+p {
+  /* Center horizontally*/
+  text-align: center;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  display:inline;
+}
+
+.about-section {
+  padding: 20px;
+  text-align: left;
+  background-color: #5d5847;
+  color: white;
+
+}
+
+.container {
+  padding: 5 16px;
+  align-content: center;
+  position:relative;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+  align-content:center;
+}
+
+.title {
+  color: grey;
+}
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+.top-center {
+  position:absolute;
+  top:15px;
+  left:200px;
+  right:100px;
+}
+@media screen and (max-width: 650px) {
+  .column {
+    width: 30%;
+    display: block;
+  }
+
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+ <img src="\school/images/demo/new1.png" width="150" height="150" alt="" float="left"/>
+    <h1> Rajya Samposit Balika Inter School</h1>
+  </h1><p>UDISC CODE 10331112707</p></h1>
+  <p>Affiliated by Bihar Secondary Examination Board, Patna </p>
+</div>
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="\school/images/demo/pramod.jpg" alt="Dr. Pramod Kumar" style="width:40%" >
+      <div class="container">
+        <h2>Dr. Pramod Kumar</h2>
+        <p class="title">Senior Secondary Teacher </p>
+          <p>(Political Science) </p>
+        <p>Ph.D, M.Edu, B.Ed. </p>
+        <p>dr.pramodkumar1977@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team2.jpg" alt="Mike" style="width:40%">
+      <div class="container">
+        <h2>Dipti Rani</h2>
+        <p class="title">Senior Secondary Teacher </p>
+        <p>(Home Science)</p>
+        <p>M.A, B.Ed.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="\school/images/demo/anzar.jpeg" alt="John" style="width:20%">
+      <div class="container">
+        <h2>Anzar Imam Ansari</h2>
+        <p class="title">Senior Secondary Teacher </p>
+        <p>(Computer Science)</p>
+        <p>M.Sc(IT), PGDCA</p>
+        <p>sharif1.minar06@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="\school/images/demo/jyoti.jpeg" alt="Mike" style="width:25%">
+      <div class="container">
+        <h2>Jyoti Kumari</h2>
+        <p class="title">Senior Secondary Teacher </p>
+        <p>(Zoology)</p>
+        <p>M.Sc, B.Ed.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="\school/images/demo/vinita.jpeg" alt="Mike" style="width:40%">
+      <div class="container">
+        <h2>Vinita Kumari</h2>
+        <p class="title">Secondary Teacher <p>
+          <p>(Home Science)</p>
+        <p>M.A, B.Ed.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="\school/images/demo/shaheen.jpeg" alt="Mike" style="width:40%">
+      <div class="container">
+        <h2>Shahin Perween </h2>
+        <p class="title">Secondary Teacher </p>
+      <p>(Urdu)</p>
+        <p>M.A, B.Ed.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="\school/images/demo/gunjan.jpeg" alt="Mike" style="width:25%">
+      <div class="container">
+        <h2>Gunjan Bharti</h2>
+        <p class="title">Secondary Teacher </p>
+      <p>(Science)</p>
+        <p>B.Sc, B.Ed.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="\school/images/demo/rekha.jpeg" alt="Mike" style="width:30%">
+      <div class="container">
+        <h2>Rekha Kumari </h2>
+        <p class="tile"> Secondary Teacher </p>
+                  <p>(Math)<p>
+          <p>M.Sc, B.Ed.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="\school/images/demo/jitender.jpeg" alt="Mike" style="width:30%">
+      <div class="container">
+        <h2>Jitender Paswan</h2>
+        <p class="title">Secondary Teacher (Music)</p>
+        <p>Sangeet Alankar</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="\school/images/demo/kiran.jpeg" alt="Mike" style="width:50%">
+      <div class="container">
+        <h2>Kiran Kumari</h2>
+        <p class="title">Secondary Teacher (Soial Science)</p>
+        <p>M.A, B.Ed.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="\school/images/demo/rakhi.jpeg" alt="Mike" style="width:50%">
+      <div class="container">
+        <h2>Rakhi Kumari</h2>
+        <p class="title">Secondary Teacher (Social Science)</p>
+        <p>M.A, B.Ed.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+ 
+</div>
+
+</body>
+</html>
