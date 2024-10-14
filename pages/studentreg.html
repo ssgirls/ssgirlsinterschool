@@ -10,27 +10,17 @@ h3{
   color:SlateBlue;
   text-align: center; 
   }
-input[type=text] {
-  width:25%;
-  background-color: rgb(247, 251, 252);
-  background-image: url('searchicon.png');
-  background-position: 10px 10px;
-  margin:5px 120px;
-  line-height:2;
-  background-repeat: no-repeat;
-  padding-top:5px;
-  padding-left: 40px;
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
 }
-input[type=number] {
-  width:5%;
-  background-color: rgb(247, 251, 252);
-  }
-  
-label{color:rgb(85, 6, 233);
-  font-size:20px;
-  padding-top:5px;
-  margin-left:30px;
 
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
 }
   
 
@@ -62,8 +52,6 @@ table.inner{
 <body>
 <h3><center>STUDENT REGISTRATION FORM</center></h3>
   <hr> 
-
- 
 <form action="connect-form.php" method="post">
   <label for="sname">STUDENT NAME : </label>
   <input type="text" id = "name"> (max 30 characters a-z and A-Z)
