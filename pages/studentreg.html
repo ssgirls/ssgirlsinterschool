@@ -9,30 +9,9 @@ h3{
   font-weight: bold; 
   color:SlateBlue;
   text-align: center; 
-  }
-input[type=text], select, textarea {
-  width: 30%;
-  padding: 12px 20px 20px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
+  text-decoration: underline
 }
 
-label {
-  padding: 20px 12px 12px 0;
-  display: inline-block;
-}
-  
-
-input[type=button], input[type=submit], input[type=reset] {
-  background-color: #04AA6D;
-  border: none;
-  color: rgb(9, 184, 238);
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-}
 table{
   font-family: Calibri; 
   color:white; 
@@ -51,17 +30,32 @@ table.inner{
 </head>
 <body>
 <h3><center>STUDENT REGISTRATION FORM</center></h3>
-  <hr> 
-<form action="connect-form.php" method="post">
-  <label for="sname">STUDENT NAME : </label>
-  <input type="text" id = "name"> (max 30 characters a-z and A-Z)
-  <br>
-  <label for="fname">FATHER'S NAME : </label>
-  <input type="text" id = "name"> (max 30 characters a-z and A-Z)
-<br>
-<!----- Date Of Birth --------------------------------------------------------->
-  <label for="dob"> DATE OF BIRTH : </label>
- <select name="Birthday_day" id="Birthday_Day">
+
+ 
+<table align="center" cellpadding = "10">
+ 
+<!----- First Name ---------------------------------------------------------->
+<tr>
+<td>FIRST NAME</td>
+<td><input type="text" name="First_Name" maxlength="30"/>
+(max 30 characters a-z and A-Z)
+</td>
+</tr>
+ 
+<!----- Last Name ---------------------------------------------------------->
+<tr>
+<td>LAST NAME</td>
+<td><input type="text" name="Last_Name" maxlength="30"/>
+(max 30 characters a-z and A-Z)
+</td>
+</tr>
+ 
+<!----- Date Of Birth -------------------------------------------------------->
+<tr>
+<td>DATE OF BIRTH</td>
+ 
+<td>
+<select name="Birthday_day" id="Birthday_Day">
 <option value="-1">Day:</option>
 <option value="1">1</option>
 <option value="2">2</option>
@@ -155,74 +149,93 @@ table.inner{
 <option value="1981">1981</option>
 <option value="1980">1980</option>
 </select>
-<br> 
+</td>
+</tr>
+ 
 <!----- Email Id ---------------------------------------------------------->
-<br>
-<label for="email"> EMAIL ID : </label>
-<input type="text" name="Email_Id" maxlength="100" />
-<br>
+<tr>
+<td>EMAIL ID</td>
+<td><input type="text" name="Email_Id" maxlength="100" /></td>
+</tr>
  
 <!----- Mobile Number ---------------------------------------------------------->
-<label for="mobile">MOBILE NUMER : </label>
-<input type="number" name="Mobile_Number" maxlength="10" />
+<tr>
+<td>MOBILE NUMBER</td>
+<td>
+<input type="text" name="Mobile_Number" maxlength="10" />
 (10 digit number)
-<BR>
+</td>
+</tr>
  
 <!----- Gender ----------------------------------------------------------->
-<label for="gender">GENDER : </label>
+<tr>
+<td>GENDER</td>
+<td>
 Male <input type="radio" name="Gender" value="Male" />
 Female <input type="radio" name="Gender" value="Female" />
-<BR>
+</td>
+</tr>
  
 <!----- Address ---------------------------------------------------------->
-
-<label for="address">ADDRESS : </label>
-<textarea name="Address" rows="4" cols="30"></textarea>
-<BR>
+<tr>
+<td>ADDRESS <br /><br /><br /></td>
+<td><textarea name="Address" rows="4" cols="30"></textarea></td>
+</tr>
  
 <!----- City ---------------------------------------------------------->
-<label for="type">CITY : </label>
+<tr>
+<td>CITY</td>
 <td><input type="text" name="City" maxlength="30" />
 (max 30 characters a-z and A-Z)
-<BR>
+</td>
+</tr>
  
 <!----- Pin Code ---------------------------------------------------------->
-<label for="pin">PINCODE : </label>
-<input type="text" name="Pin_Code" maxlength="6" />
+<tr>
+<td>PIN CODE</td>
+<td><input type="text" name="Pin_Code" maxlength="6" />
 (6 digit number)
-
+</td>
+</tr>
+ 
 <!----- State ---------------------------------------------------------->
-<BR>
-<label for="state">STATE : </label>
-<input type="text" name="State" maxlength="30" />
+<tr>
+<td>STATE</td>
+<td><input type="text" name="State" maxlength="30" />
 (max 30 characters a-z and A-Z)
-<BR>
+</td>
+</tr>
  
 <!----- Country ---------------------------------------------------------->
-<label for="country">COUNTRY : </label>
-<input type="text" name="Country" value="India" readonly="readonly" />
-<BR>
+<tr>
+<td>COUNTRY</td>
+<td><input type="text" name="Country" value="India" readonly="readonly" /></td>
+</tr>
  
 <!----- Hobbies ---------------------------------------------------------->
  
-<label for="hobby">HOBBY : </label>
+<tr>
+<td>HOBBIES <br /><br /><br /></td>
+ 
 <td>
-<label for="drawing"> Drawing </label>
+Drawing
 <input type="checkbox" name="Hobby_Drawing" value="Drawing" />
-<label for="drawing"> Music </label>
+Singing
 <input type="checkbox" name="Hobby_Singing" value="Singing" />
-<label for="drawing"> Fine Art </label>
+Dancing
 <input type="checkbox" name="Hobby_Dancing" value="Dancing" />
-<label for="drawing"> Games </label>
+Sketching
 <input type="checkbox" name="Hobby_Cooking" value="Cooking" />
+<br />
 Others
 <input type="checkbox" name="Hobby_Other" value="Other">
 <input type="text" name="Other_Hobby" maxlength="30" />
 </td>
-
+</tr>
+ 
 <!----- Qualification---------------------------------------------------------->
-<br>
-<td> QUALIFICATION </td>
+<tr>
+<td>QUALIFICATION <br /><br /><br /><br /><br /><br /><br /></td>
  
 <td>
 <table>
@@ -286,8 +299,7 @@ Others
 </tr>
  
 <!----- Submit and Reset ------------------------------------------------->
-<br>
-  <tr>
+<tr>
 <td colspan="2" align="center">
 <input type="submit" value="Submit">
 <input type="reset" value="Reset">
