@@ -1,33 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
   float: left;
-  width: 180px;
+  width: 33%;
+  padding: 0 10px;
 }
 
-div.gallery:hover {
-  border: 1px solid #777;
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -8px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding:15px;
 }
 
-div.gallery img {
-  width: 100%;
-  height: auto;
+/* Responsive columns */
+@media screen and (max-width: 400px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }
 
-div.desc {
-  padding: 15px;
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 40px;
   text-align: center;
+  background-color: #f1f1f1;
+}
+.about-section {
+  padding: 20px;
+  text-align: left;
+  background-color: #5d5847;
+  color: white;
+
+}
+
+.container {
+  padding: 2px 16px;
+  align-content: center;
+  position:relative;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+  align-content:center;
+}
+
+.title {
+  color: grey;
+}
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
 }
 </style>
 </head>
 <body>
 
-<div class="gallery">
-  <a target="_blank" href="../images/demo/pic1.jpeg">
+<div class="about-section">
+   <img class="imgr" src="../images/demo/new1.png" alt="" width="200" height="200" />
+     <h1> SS.GIRLS INTER SCHOOL</h1>
+  </h1><p>UDISC CODE 10331112707</p></h1>
+  <p>Affiliated by Bihar Secondary Examination Board, Patna </p>
+</div>
+<h2 style="text-align:center">Our Team</h2>
+  <hr>
+<div class="row">
+  <div class="column">
+    <div class="card">
+ <a target="_blank" href="../images/demo/pic1.jpeg">
     <img class="imgr" src="../images/demo/pic1.jpeg" alt="pic1" style="width:100%">
   </a>
   <div class="desc">Awarded By DM </div>
