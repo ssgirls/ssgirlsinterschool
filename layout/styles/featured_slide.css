@@ -18,8 +18,8 @@ File: Featured Slider CSS
 .featured_box{display:block; position:relative; width:960px; height:300px;}
 .featured_box{display:block; position:relative; width:960px; height:300px;}
 .featured_box img{display:block; float:left; width:450px; height:300px;}
-.featured_box .floater{display:inline; float:right; width:450px; margin:30px 30px 0 0;}
-.featured_box p{margin:0 0 15px 0; padding:0; line-height:1.6em;}
+.featured_box .floater{display:inline; float:right; width:650px; margin:30px 30px 0 0;}
+.featured_box p{margin:0 0 15px 0; padding:0; line-height:2.6em;}
 .featured_box p.readmore{display:block; width:100%; margin:0; padding:0; text-align:right; line-height:normal; text-transform:uppercase;}
 
 /* ----------------------------------------------Navigation Buttons------------------------------------- */
@@ -48,3 +48,4 @@ HTML Output:
 #fsn ul li, #fsn ul li a{display:block; float:left; width:15px; height:15px; margin:0 10px 0 0; padding:0;}
 #fsn ul li a{float:none; border:none; margin:0; outline:none; text-indent:-5000px; text-decoration:none; background:url("images/slide.png") 50% 50% no-repeat;}
 #fsn ul li a:hover, #fsn ul li.activeSlide a{background:url("images/slide.png") 0% 50% no-repeat;}
+
